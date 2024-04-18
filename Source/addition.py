@@ -3,5 +3,15 @@
 
 
 def addition(nombre1: float, nombre2: float):
-    return print(f"RESULTAT: {nombre1 + nombre2}")
+    """_summary_
+
+    Args:
+        nombre1 (float): un nombre de type float
+        nombre2 (float): un nombre de type float
+
+    Returns:
+        float : l'addition de nombre1 et nombre2
+    """
+    return float(nombre1) + float(nombre2)
+
 
