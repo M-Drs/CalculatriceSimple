@@ -24,17 +24,18 @@ if mdp == MDP :
     l7=r"  '..'  ':::'     * /\ *     .'/.\'.   "
     l8=r"      *            *..*         :"
 
-    print(emoji.emojize(':party_popper::party_popper::party_popper:  WELCOME :party_popper::party_popper::party_popper:'))
+    print(emoji.emojize(f"':party_popper::party_popper::party_popper: {Fore.RED} WELCOME {Style.RESET_ALL} :party_popper::party_popper::party_popper:'"))
     print(f"{Fore.GREEN}{l1}{Style.RESET_ALL}")
-    print(l2)
-    print(l3)
-    print(l4)
+    print(f"{Fore.GREEN}{l2}{Style.RESET_ALL}")
+    print(f"{Fore.YELLOW}{l3}{Style.RESET_ALL}")
+    print(f"{Fore.YELLOW}{l4}{Style.RESET_ALL}")
     print(f"{Fore.GREEN}{l5}{Style.RESET_ALL}")
-    print(l6)
-    print(l7)
-    print(l8)
+    print(f"{Fore.CYAN}{l6}{Style.RESET_ALL}")
+    print(f"{Fore.CYAN}{l7}{Style.RESET_ALL}")
+    print(f"{Fore.MAGENTA}{l8}{Style.RESET_ALL}")
 
 else :
+    print(emoji.emojize(f"{Fore.RED} 💀💀 Mot de passe incorrect: La calculette se ferme {Style.RESET_ALL} 💀💀"))
     sys.exit()
 
 # Menu calculatrice
