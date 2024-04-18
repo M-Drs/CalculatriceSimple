@@ -1,3 +1,4 @@
+
 # Import
 from colorama import Fore, Style
 import sys
@@ -67,4 +68,28 @@ while continuer == "o":
             print(f"{Fore.RED}Division par 0 impossible !{Style.RESET_ALL}")
         else:
             division = division_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
+
             print(f"{Fore.GREEN}{premier_nombre} / {deuxieme_nombre} = {division}{Style.RESET_ALL}")
+
+            print(f"{premier_nombre} divisé par {deuxieme_nombre} = {division}")
+
+            
+            
+l1=r"                                   .''.       "
+l2=r"       .''.      .        *''*    :_\/_:     . "
+l3=r"      :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'."
+l4=r"  .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-"
+l5=r" :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'."
+l6=r" : /\ : :::::     *_\/_*     -= o =-  /)\    '  *"
+l7=r"  '..'  ':::'     * /\ *     .'/.\'.   "
+l8=r"      *            *..*         :"
+
+print(l1)
+print(l2)
+print(l3)
+print(l4)
+print(l5)
+print(l6)
+print(l7)
+print(l8)
+
