@@ -1,4 +1,3 @@
-
 # Import
 from colorama import Fore, Style
 import sys
@@ -57,41 +56,42 @@ while continuer == "o":
     choix_utilisateur = input(menu)
 
     if choix_utilisateur not in choix_possible:
-        print("Veuillez choisir une option valide...")
+        print(f"{Fore.RED}Veuillez choisir une option valide...{Style.RESET_ALL}")
         continue
 
-    if choix_utilisateur == "q":
-        sys.exit()
+    else:
 
+        if choix_utilisateur == "q":
+                sys.exit()
 
-    premier_nombre = input(phrase_premier_nombre)
-    deuxieme_nombre = input(phrase_deuxieme_nombre)
-    
+        premier_nombre = input(phrase_premier_nombre)
+        deuxieme_nombre = input(phrase_deuxieme_nombre)
 
-    if choix_utilisateur == "1":
-        addition_result = addition(premier_nombre, deuxieme_nombre)
-        print(f"{Fore.GREEN}{premier_nombre} + {deuxieme_nombre} = {addition_result}{Style.RESET_ALL}")
+        if  premier_nombre.isdigit() and deuxieme_nombre.isdigit():
+            
 
-    elif choix_utilisateur == "2":
-        soustraction_result = soustraction(premier_nombre, deuxieme_nombre)
-        print(f"{Fore.GREEN}{premier_nombre} - {deuxieme_nombre} = {soustraction_result}{Style.RESET_ALL}")
+            if choix_utilisateur == "1":
+                addition_result = addition(premier_nombre, deuxieme_nombre)
+                print(f"{Fore.GREEN}{premier_nombre} + {deuxieme_nombre} = {addition_result}{Style.RESET_ALL}")
+
+            elif choix_utilisateur == "2":
+                soustraction_result = soustraction(premier_nombre, deuxieme_nombre)
+                print(f"{Fore.GREEN}{premier_nombre} - {deuxieme_nombre} = {soustraction_result}{Style.RESET_ALL}")
+                
+
+            elif choix_utilisateur == "3":
+                # Code Multiplication
+                multiplication = multiplication_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
+                print(f"{Fore.GREEN}{premier_nombre} x {deuxieme_nombre} = {multiplication}{Style.RESET_ALL}")
+
+            elif choix_utilisateur == "4":
+                # Code Division
+                if deuxieme_nombre == "0":
+                    print(f"{Fore.RED}Division par 0 impossible !{Style.RESET_ALL}")
+                else:
+                    division = division_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
+
+                    print(f"{Fore.GREEN}{premier_nombre} / {deuxieme_nombre} = {division}{Style.RESET_ALL}")
         
-
-    elif choix_utilisateur == "3":
-        # Code Multiplication
-        multiplication = multiplication_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
-        print(f"{Fore.GREEN}{premier_nombre} x {deuxieme_nombre} = {multiplication}{Style.RESET_ALL}")
-
-    elif choix_utilisateur == "4":
-        # Code Division
-        if deuxieme_nombre == "0":
-            print(f"{Fore.RED}Division par 0 impossible !{Style.RESET_ALL}")
         else:
-            division = division_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
-
-            print(f"{Fore.GREEN}{premier_nombre} / {deuxieme_nombre} = {division}{Style.RESET_ALL}")
-
-            
-            
-
-
+            print(f"{Fore.RED}Entrée non valide !{Style.RESET_ALL}")
