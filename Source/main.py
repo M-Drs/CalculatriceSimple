@@ -1,7 +1,10 @@
 # Import
+from colorama import Fore, Style
 import sys
 from division import division_func
 from multiplication import multiplication_func
+from addition import addition
+from soustraction import soustraction
 
 
 
@@ -45,22 +48,23 @@ while continuer == "o":
     
 
     if choix_utilisateur == "1":
-        # Code Addition
-        pass
+        addition_result = addition(premier_nombre, deuxieme_nombre)
+        print(f"{Fore.GREEN}{premier_nombre} + {deuxieme_nombre} = {addition_result}{Style.RESET_ALL}")
 
     elif choix_utilisateur == "2":
-        # Code Soustraction
-        pass
+        soustraction_result = soustraction(premier_nombre, deuxieme_nombre)
+        print(f"{Fore.GREEN}{premier_nombre} - {deuxieme_nombre} = {soustraction_result}{Style.RESET_ALL}")
+        
 
     elif choix_utilisateur == "3":
         # Code Multiplication
         multiplication = multiplication_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
-        print(f"{premier_nombre} multiplié par {deuxieme_nombre} = {multiplication}")
+        print(f"{Fore.GREEN}{premier_nombre} x {deuxieme_nombre} = {multiplication}{Style.RESET_ALL}")
 
     elif choix_utilisateur == "4":
         # Code Division
         if deuxieme_nombre == "0":
-            print("Division par 0 impossible !")
+            print(f"{Fore.RED}Division par 0 impossible !{Style.RESET_ALL}")
         else:
             division = division_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
-            print(f"{premier_nombre} divisé par {deuxieme_nombre} = {division}")
+            print(f"{Fore.GREEN}{premier_nombre} / {deuxieme_nombre} = {division}{Style.RESET_ALL}")
