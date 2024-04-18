@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "calculatricesimple"
+version = "0.1.0"
+description = ""
+authors = ["Martin D <martin.deyres@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python  =">=3.10"
+python-dotenv = "^1.0.1"
+emoji = "^2.11.0"
+colorama = "^0.4.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -5,8 +5,37 @@ from division import division_func
 from multiplication import multiplication_func
 from addition import addition
 from soustraction import soustraction
+import emoji
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
+MDP = os.getenv('MOT_DE_PASSE')
+mdp = input('Mot de passe?')
+if mdp == MDP :
+    print("-" * 20)
 
+    l1=r"                                   .''.       "
+    l2=r"       .''.      .        *''*    :_\/_:     . "
+    l3=r"      :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'."
+    l4=r"  .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-"
+    l5=r" :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'."
+    l6=r" : /\ : :::::     *_\/_*     -= o =-  /)\    '  *"
+    l7=r"  '..'  ':::'     * /\ *     .'/.\'.   "
+    l8=r"      *            *..*         :"
+
+    print(emoji.emojize(':party_popper::party_popper::party_popper:  WELCOME :party_popper::party_popper::party_popper:'))
+    print(f"{Fore.GREEN}{l1}{Style.RESET_ALL}")
+    print(l2)
+    print(l3)
+    print(l4)
+    print(f"{Fore.GREEN}{l5}{Style.RESET_ALL}")
+    print(l6)
+    print(l7)
+    print(l8)
+
+else :
+    sys.exit()
 
 # Menu calculatrice
 menu = """1- (+) Addition
@@ -30,28 +59,11 @@ continuer = "o"
 # division par 0 ? 
 # Si entrée invalide -> Message
 
+
+
 while continuer == "o":
 
-    print("-" * 20)
-
-    l1=r"                                   .''.       "
-    l2=r"       .''.      .        *''*    :_\/_:     . "
-    l3=r"      :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'."
-    l4=r"  .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-"
-    l5=r" :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'."
-    l6=r" : /\ : :::::     *_\/_*     -= o =-  /)\    '  *"
-    l7=r"  '..'  ':::'     * /\ *     .'/.\'.   "
-    l8=r"      *            *..*         :"
-
-    print(f"{Fore.GREEN}{l1}{Style.RESET_ALL}")
-    print(l2)
-    print(l3)
-    print(l4)
-    print(f"{Fore.GREEN}{l5}{Style.RESET_ALL}")
-    print(l6)
-    print(l7)
-    print(l8)
-
+  
 
     choix_utilisateur = input(menu)
 
