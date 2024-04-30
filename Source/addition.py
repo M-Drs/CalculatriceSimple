@@ -15,3 +15,6 @@ def addition(nombre1: float, nombre2: float):
     return float(nombre1) + float(nombre2)
 
 
+if __name__ == "__main__":
+    print(addition("10",10))
+    
