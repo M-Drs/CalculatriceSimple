@@ -6,7 +6,7 @@ from multiplication import multiplication_func
 from addition import addition
 from soustraction import soustraction
 
-def run_calculatrice(menu, choix_possible, phrase_premier_nombre, phrase_deuxieme_nombre):
+def run_calculatrice(menu, choix_possible, phrase_premier_nombre ):
     
     while True:
 
@@ -21,8 +21,8 @@ def run_calculatrice(menu, choix_possible, phrase_premier_nombre, phrase_deuxiem
             if choix_utilisateur == "q":
                     sys.exit()
 
-            premier_nombre = input(phrase_premier_nombre)
-            deuxieme_nombre = input(phrase_deuxieme_nombre)
+            premier_nombre = input("Entrez le premier nombre : ")
+            deuxieme_nombre = input("Entrez le deuxieme nombre : ")
 
             if  premier_nombre.isdigit() and deuxieme_nombre.isdigit():
                 
