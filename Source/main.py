@@ -84,10 +84,12 @@ while continuer == "o":
             
 
             if choix_utilisateur == "1":
+                # Code addition
                 addition_result = addition(premier_nombre, deuxieme_nombre)
                 print(f"{Fore.GREEN}{premier_nombre} + {deuxieme_nombre} = {addition_result}{Style.RESET_ALL}")
 
             elif choix_utilisateur == "2":
+                # Code soustraction
                 soustraction_result = soustraction(premier_nombre, deuxieme_nombre)
                 print(f"{Fore.GREEN}{premier_nombre} - {deuxieme_nombre} = {soustraction_result}{Style.RESET_ALL}")
                 
@@ -99,12 +101,8 @@ while continuer == "o":
 
             elif choix_utilisateur == "4":
                 # Code Division
-                if deuxieme_nombre == "0":
-                    print(f"{Fore.RED}Division par 0 impossible !{Style.RESET_ALL}")
-                else:
-                    division = division_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
-
-                    print(f"{Fore.GREEN}{premier_nombre} / {deuxieme_nombre} = {division}{Style.RESET_ALL}")
+                division = division_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
+                print(f"{Fore.GREEN}{premier_nombre} / {deuxieme_nombre} = {division}{Style.RESET_ALL}")
         
         else:
             print(f"{Fore.RED}Entrée non valide !{Style.RESET_ALL}")
