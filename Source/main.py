@@ -23,8 +23,6 @@ menu = """1- (+) Addition
 5- (q) Quitter
 Votre choix : """
 
-phrase_premier_nombre = "Entrez le premier nombre : "
-phrase_deuxieme_nombre = "Entrez le deuxieme nombre : "
 
 
 # Choix possible
@@ -33,4 +31,4 @@ choix_utilisateur = None
 continuer = "o"
 
 if __name__ == "__main__":
-    run_calculatrice(menu, choix_possible, phrase_premier_nombre, phrase_deuxieme_nombre)
+    run_calculatrice(menu, choix_possible)
