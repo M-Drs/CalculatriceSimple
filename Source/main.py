@@ -5,6 +5,7 @@ from division import division_func
 from multiplication import multiplication_func
 from addition import addition
 from soustraction import soustraction
+from fireworks import fireworks
 import emoji
 from dotenv import load_dotenv
 import os
@@ -13,29 +14,9 @@ load_dotenv()
 MDP = os.getenv('MOT_DE_PASSE')
 mdp = input('Mot de passe?')
 if mdp == MDP :
-    print("-" * 20)
-
-    l1=r"                                   .''.       "
-    l2=r"       .''.      .        *''*    :_\/_:     . "
-    l3=r"      :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'."
-    l4=r"  .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-"
-    l5=r" :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'."
-    l6=r" : /\ : :::::     *_\/_*     -= o =-  /)\    '  *"
-    l7=r"  '..'  ':::'     * /\ *     .'/.\'.   "
-    l8=r"      *            *..*         :"
-
-    print(emoji.emojize(f"':party_popper::party_popper::party_popper: {Fore.RED} WELCOME {Style.RESET_ALL} :party_popper::party_popper::party_popper:'"))
-    print(f"{Fore.GREEN}{l1}{Style.RESET_ALL}")
-    print(f"{Fore.GREEN}{l2}{Style.RESET_ALL}")
-    print(f"{Fore.YELLOW}{l3}{Style.RESET_ALL}")
-    print(f"{Fore.YELLOW}{l4}{Style.RESET_ALL}")
-    print(f"{Fore.GREEN}{l5}{Style.RESET_ALL}")
-    print(f"{Fore.CYAN}{l6}{Style.RESET_ALL}")
-    print(f"{Fore.CYAN}{l7}{Style.RESET_ALL}")
-    print(f"{Fore.MAGENTA}{l8}{Style.RESET_ALL}")
-
+    print(fireworks(True))
 else :
-    print(emoji.emojize(f"{Fore.RED} 💀💀 Mot de passe incorrect: La calculette se ferme {Style.RESET_ALL} 💀💀"))
+    print(fireworks(False))
     sys.exit()
 
 # Menu calculatrice
