@@ -6,7 +6,7 @@ from multiplication import multiplication_func
 from addition import addition
 from soustraction import soustraction
 
-def run_calculatrice(menu, choix_possible, phrase_premier_nombre ):
+def run_calculatrice(menu, choix_possible ):
     
     while True:
 
