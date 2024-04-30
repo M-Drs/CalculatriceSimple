@@ -6,47 +6,53 @@ from multiplication import multiplication_func
 from addition import addition
 from soustraction import soustraction
 
-def run_calculatrice(menu, choix_possible, phrase_premier_nombre, phrase_deuxieme_nombre):
-    
-    while True:
 
-        choix_utilisateur = input(menu)
 
-        if choix_utilisateur not in choix_possible:
-            print(f"{Fore.RED}Veuillez choisir une option valide...{Style.RESET_ALL}")
-            continue
+def input_choix_utilistaeur(menu):
+    choix_utilisateur = input(menu)
+    return choix_utilisateur
 
-        else:
 
-            if choix_utilisateur == "q":
-                    sys.exit()
+def choix_utilisateur_affichage(choix_utilisateur, choix_possible, phrase_premier_nombre, phrase_deuxieme_nombre):
 
-            premier_nombre = input(phrase_premier_nombre)
-            deuxieme_nombre = input(phrase_deuxieme_nombre)
+    if choix_utilisateur not in choix_possible:
+            print(f"{Fore.RED}Veuillez choisir une option valide...{Style.RESET_ALL}")  
+    else:
 
-            if  premier_nombre.isdigit() and deuxieme_nombre.isdigit():
-                
+        if choix_utilisateur == "q":
+                sys.exit()
 
-                if choix_utilisateur == "1":
-                    # Code addition
-                    addition_result = addition(premier_nombre, deuxieme_nombre)
-                    print(f"{Fore.GREEN}{premier_nombre} + {deuxieme_nombre} = {addition_result}{Style.RESET_ALL}")
+    premier_nombre = input(phrase_premier_nombre)
+    deuxieme_nombre = input(phrase_deuxieme_nombre)
 
-                elif choix_utilisateur == "2":
-                    # Code soustraction
-                    soustraction_result = soustraction(premier_nombre, deuxieme_nombre)
-                    print(f"{Fore.GREEN}{premier_nombre} - {deuxieme_nombre} = {soustraction_result}{Style.RESET_ALL}")
-                    
+    return premier_nombre, deuxieme_nombre
 
-                elif choix_utilisateur == "3":
-                    # Code Multiplication
-                    multiplication = multiplication_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
-                    print(f"{Fore.GREEN}{premier_nombre} x {deuxieme_nombre} = {multiplication}{Style.RESET_ALL}")
 
-                elif choix_utilisateur == "4":
-                    # Code Division
-                    division = division_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
-                    print(f"{Fore.GREEN}{premier_nombre} / {deuxieme_nombre} = {division}{Style.RESET_ALL}")
+def run_calculatrice(premier_nombre, deuxieme_nombre, choix_utilisateur):
+
+    if  premier_nombre.isdigit() and deuxieme_nombre.isdigit():
+        
+
+        if choix_utilisateur == "1":
+            # Code addition
+            addition_result = addition(premier_nombre, deuxieme_nombre)
+            print(f"{Fore.GREEN}{premier_nombre} + {deuxieme_nombre} = {addition_result}{Style.RESET_ALL}")
+
+        elif choix_utilisateur == "2":
+            # Code soustraction
+            soustraction_result = soustraction(premier_nombre, deuxieme_nombre)
+            print(f"{Fore.GREEN}{premier_nombre} - {deuxieme_nombre} = {soustraction_result}{Style.RESET_ALL}")
             
-            else:
-                print(f"{Fore.RED}Entrée non valide !{Style.RESET_ALL}")
+
+        elif choix_utilisateur == "3":
+            # Code Multiplication
+            multiplication = multiplication_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
+            print(f"{Fore.GREEN}{premier_nombre} x {deuxieme_nombre} = {multiplication}{Style.RESET_ALL}")
+
+        elif choix_utilisateur == "4":
+            # Code Division
+            division = division_func(premier_nombre=premier_nombre, deuxieme_nombre=deuxieme_nombre)
+            print(f"{Fore.GREEN}{premier_nombre} / {deuxieme_nombre} = {division}{Style.RESET_ALL}")
+    
+    else:
+        print(f"{Fore.RED}Entrée non valide !{Style.RESET_ALL}")

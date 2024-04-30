@@ -4,6 +4,8 @@ from fireworks import fireworks
 import emoji
 from dotenv import load_dotenv
 from code_source_calculatrice import run_calculatrice
+from code_source_calculatrice import input_choix_utilistaeur
+from code_source_calculatrice import choix_utilisateur_affichage
 import os
 load_dotenv()
 
@@ -33,4 +35,6 @@ choix_utilisateur = None
 continuer = "o"
 
 if __name__ == "__main__":
-    run_calculatrice(menu, choix_possible, phrase_premier_nombre, phrase_deuxieme_nombre)
+    choix_utilisateur = input_choix_utilistaeur(menu)
+    premier_nombre, deuxieme_nombre = choix_utilisateur_affichage(choix_utilisateur, choix_possible, phrase_premier_nombre, phrase_deuxieme_nombre)
+    run_calculatrice(premier_nombre, deuxieme_nombre, choix_utilisateur)
