@@ -3,6 +3,7 @@ from Source.division import division_func
 from Source.multiplication import multiplication_func
 from Source.soustraction import soustraction
 import pytest
+from unittest.mock import patch
 
 # Test de la fonction addition:
 
@@ -43,8 +44,3 @@ def test_soustraction():
     assert soustraction(-1, 1) == -2
     assert soustraction(-5, -5) == 0
     assert soustraction(9000000, 20000000) == -11000000
-
-
-
-
-# Test de la fonction 'isdigit'
